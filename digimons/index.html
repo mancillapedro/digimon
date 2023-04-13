@@ -7,16 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <title>Digimon</title>
+    <link rel="stylesheet" href="./../assets/css/main.css">
+    <title>Listado de Digimons</title>
 </head>
 
 <body>
+
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container">
-                <a class="navbar-brand" href="">
-                    <img src="./assets/img/digimon_logo.webp" class="dgm__navbar__logo" alt="logo digimon">
+                <a class="navbar-brand" href="./../index.html">
+                    <img src="./../assets/img/digimon_logo.webp" class="dgm__navbar__logo" alt="logo digimon">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -24,35 +25,22 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="./digimons/index.html">Listado de Digimons</a>
-                        </li>
-                      </ul>
-                
                 </div>
             </div>
         </nav>
     </header>
-    <main class="container">
-        <h1 class="text-center my-5">Encuentra tu Digimon</h1>
-        <form id="searchForm" class="d-flex" role="search" method="" action="./digimons/show.html">
-            <input class="form-control me-2" type="search" placeholder="Search" list="digimonDataList"
-                name="name" aria-label="Search">
-            <!-- <datalist id="digimonDataList"></datalist> -->
-            <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-    </main>
-    <footer>
 
-    </footer>
+    <main class="container">
+        <section id="digimonSection" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+        </section>
+    </main>
+
+    <footer></footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
-    <script type="module" src="./assets/js/views/home/indexView.js"></script>
+    <script type="module" src="./../assets/js/views/digimons/indexView.js"></script>
 </body>
 
 </html>
