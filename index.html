@@ -15,7 +15,7 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container">
-                <a class="navbar-brand" href="">
+                <a class="navbar-brand" href="#">
                     <img src="./assets/img/digimon_logo.webp" class="dgm__navbar__logo" alt="logo digimon">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -26,33 +26,69 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#">
+                                Home
+                            </a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="./digimons/index.html">Listado de Digimons</a>
+                            <a class="nav-link" href="./digimons/index.html">
+                                Listado de Digimons
+                            </a>
                         </li>
-                      </ul>
-                
+                    </ul>
+
                 </div>
             </div>
         </nav>
     </header>
+
     <main class="container">
         <h1 class="text-center my-5">Encuentra tu Digimon</h1>
-        <form id="searchForm" class="d-flex" role="search" method="" action="./digimons/show.html">
-            <input class="form-control me-2" type="search" placeholder="Search" list="digimonDataList"
-                name="name" aria-label="Search">
-            <!-- <datalist id="digimonDataList"></datalist> -->
-            <button class="btn btn-outline-success" type="submit">Search</button>
+        <form id="searchForm" class="row flex-column-reverse align-items-center gap-4" role="search" method=""
+            action="./digimons/show.html">
+
+            <fieldset id="radioSection" class="col-4 row row-cols-3">
+                <legend class="col col-form-label py-0">
+                    Buscar por:
+                </legend>
+                <div class="col">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="searchOption" value="name"
+                            data-control-search="input" checked>
+                        Name
+                    </label>
+                </div>
+                <div class="col">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="searchOption" value="level"
+                            data-control-search="select">
+                        Level
+                    </label>
+                </div>
+            </fieldset>
+
+            <div class="col-4 d-flex">
+                <input class="form-control me-2" type="search" placeholder="Buscar" list="digimonDataList" name="name"
+                    aria-label="Search">
+                <datalist id="digimonDataList"></datalist>
+                <select class="d-none form-select me-2" name="level">
+                    <option value="" selected disabled>Open this select menu</option>
+                </select>
+                <button class="btn btn-outline-success" type="submit">
+                    Buscar
+                </button>
+            </div>
+
         </form>
     </main>
-    <footer>
 
-    </footer>
+    <footer></footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
     <script type="module" src="./assets/js/views/home/indexView.js"></script>
+
 </body>
 
 </html>

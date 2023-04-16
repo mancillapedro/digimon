@@ -3,7 +3,7 @@ import { smallCard } from "./../../components/cardComponent.js"
 
 addEventListener("DOMContentLoaded", () => {
     const digimonSection = document.querySelector("#digimonSection")
-    API_DIGIMON.allDigimon().then(data =>
+    API_DIGIMON.allDigimons().then(data =>
         data.forEach(item =>
             digimonSection.insertAdjacentHTML('beforeend', `<div class="col">${smallCard(item)}</div>`)
         )
