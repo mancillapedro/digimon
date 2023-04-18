@@ -11,7 +11,15 @@
     <title>Digimon</title>
 </head>
 
-<body>
+<body class="bg-light">
+    <div id="loading"
+        class="d-flex justify-content-center align-items-center vh-100 vw-100 position-absolute z-3 bg-dark bg-opacity-50">
+        <img src="./../assets/img/digimon_logo.webp" class="position-absolute opacity-75" alt="">
+        <div class="spinner-border text-info dgm__loading" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
     <header class="sticky-top">
         <nav class="navbar navbar-expand-md bg-dark py-3" data-bs-theme="dark">
             <div class="container">
@@ -42,18 +50,18 @@
     </header>
 
     <main class="container">
-
         <h1 class="text-center my-5">Encuentra tu Digimon</h1>
 
         <form id="searchForm" class="row flex-column align-items-center gap-4 p-2" role="search" method=""
-            action="./digimons/show.html">
+            action="./digimons/show.html"
+            >
 
             <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4 d-flex">
                 <input class="form-control me-2" type="search" placeholder="Buscar" list="digimonDataList" name="name"
                     aria-label="Search">
                 <datalist id="digimonDataList"></datalist>
                 <select class="d-none form-select me-2" name="level">
-                    <option value="" selected disabled>Open this select menu</option>
+                    <option value="" selected disabled>Seleccione level</option>
                 </select>
                 <button class="btn btn-primary" type="submit">
                     Buscar

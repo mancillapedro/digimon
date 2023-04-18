@@ -1,5 +1,6 @@
 import API_DIGIMON from "./../../api/apiDigimon.js"
 import { bigCard, smallCard } from "./../../components/cardComponent.js"
+import loadingComponent from "../../components/loadingComponent.js"
 
 const
     notFoundTemplate = ({ searchOption, value }) =>
@@ -15,7 +16,7 @@ const
     }
 
 addEventListener("DOMContentLoaded", () => {
-
+    const loading = loadingComponent()
     API_DIGIMON(params)
         .then((data) =>
             document.querySelector("main").insertAdjacentHTML('beforeend',
@@ -35,4 +36,5 @@ addEventListener("DOMContentLoaded", () => {
 
             )
         )
+        .then(loading.hide)
 })
