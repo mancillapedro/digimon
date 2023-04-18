@@ -27,12 +27,6 @@ export default () => {
             this.radioSection.addEventListener("click", ({ target }) => target.tagName === "INPUT" && this.chooseControlSearch(target.dataset.controlSearch))
             this.input.addEventListener("input", ({ target }) => this.disableSubmit(target))
             this.select.addEventListener("change", ({ target }) => this.disableSubmit(target))
-            form.addEventListener("submit", (e) => {
-                e.preventDefault()
-                const data = [...new FormData(form).entries()].reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {})
-                console.log(data)
-                window.location.href = `./digimons/show.html?searchOption=${data.searchOption}&value=${data[data.searchOption]}`
-            })
         }
     }
 }

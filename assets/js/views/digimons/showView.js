@@ -11,7 +11,7 @@ const
     search = new URLSearchParams(window.location.search),
     params = {
         searchOption: search.get("searchOption"),
-        value: search.get("value")
+        value: search.get(search.get("searchOption"))
     }
 
 addEventListener("DOMContentLoaded", () => {
