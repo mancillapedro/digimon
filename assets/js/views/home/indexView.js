@@ -4,7 +4,7 @@ import formComponent from "./../../components/formComponent.js"
 addEventListener("DOMContentLoaded", () => {
     const form = formComponent()
 
-    API_DIGIMON.allDigimons()
+    API_DIGIMON({})
         .then(data => {
             const
                 levels = new Set(),

@@ -13,8 +13,8 @@
 
 <body>
 
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg bg-dark py-3" data-bs-theme="dark">
             <div class="container">
                 <a class="navbar-brand" href="./../index.html">
                     <img src="./../assets/img/digimon_logo.webp" class="dgm__navbar__logo" alt="logo digimon">
@@ -24,14 +24,27 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse ms-3" id="navbarSupportedContent">
+                    <ul class="navbar-nav mt-3 mt-md-0 nav-underline">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./../index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page">
+                                Listado de Digimons
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
 
     <main class="container">
-        <section id="digimonSection" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+        <h1 class="my-3 my-md-4 mb-xl-5 text-center">Listado de Digimons</h1>
+        <section id="digimonSection" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5  justify-content-center">
         </section>
     </main>
 

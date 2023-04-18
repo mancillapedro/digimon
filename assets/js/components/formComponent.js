@@ -30,7 +30,8 @@ export default () => {
             form.addEventListener("submit", (e) => {
                 e.preventDefault()
                 const data = [...new FormData(form).entries()].reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {})
-                window.location.href = `./digimons/show.html?${data.searchOption}=${data[data.searchOption]}`
+                console.log(data)
+                window.location.href = `./digimons/show.html?searchOption=${data.searchOption}&value=${data[data.searchOption]}`
             })
         }
     }
